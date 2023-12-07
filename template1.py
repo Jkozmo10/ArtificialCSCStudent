@@ -130,27 +130,7 @@ resume = r"""%-------------------------
 
 &&EXPERIENCE&&
 
-
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user's repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+&&PROJECTS&&
 
 
 
@@ -162,7 +142,8 @@ resume = r"""%-------------------------
      \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
      \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
      \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     \textbf{Libraries}{: pandas, NumPy, Matplotlib} \\
+     &&SKILL_LIST&&
     }}
  \end{itemize}
 
@@ -197,8 +178,10 @@ projects = r"""%-----------PROJECTS-----------
 
   \resumeSubHeadingListEnd"""
 
-project_instance = r"""\resumeProjectHeading
-          {\\textbf{Gitlytics} $|$ \\emph{&&SKILLS&&}}{&&PROJ_DATES&&}
+project_instance = r"""\\resumeProjectHeading
+          {\\textbf{&&PROJ_TITLE&&} $|$ \\emph{&&SKILLS&&}}{&&PROJ_DATES&&}
           \\resumeItemListStart
 &&PROJ_BPS&&
           \\resumeItemListEnd"""
+
+skills_list = r"""\textbf{&&LIST_NAME&&}{: &&SKILLS&&} \\"""

@@ -31,6 +31,29 @@ def write_resume():
     exp_inst2 = multiple_replace(experience2, template1.experience_instance)
     exp = re.sub("&&EXPERIENCE_INSTS&&", exp_inst1 + '\n' + exp_inst2, str(template1.experience))
 
+    project1 = {
+        "&&PROJ_TITLE&&": "XKCD Chatbot",
+        "&&PROJ_DATES&&": "May 2001 - May 2030",
+        "&&SKILLS&&": "Mojo, Word, Llama",
+        "&&PROJ_BPS&&": exp1_bps
+    }
+    proj_inst1 = multiple_replace(project1, template1.project_instance)
+
+    project2 = {
+        "&&PROJ_TITLE&&": "Resume Generator",
+        "&&PROJ_DATES&&": "Crossword season",
+        "&&SKILLS&&": "Python, LaTeX, Alpaca",
+        "&&PROJ_BPS&&": exp1_bps
+    }
+    proj_inst2 = multiple_replace(project2, template1.project_instance)
+    projects = re.sub("&&PROJECT_INSTS&&", proj_inst1 + '\n' + proj_inst2, str(template1.projects))
+
+    lang_skills = {
+        "&&LIST_NAME&&": "Other skills",
+        "&&SKILLS&&": "Crosswords, NYT connections, Advent of Code"
+    }
+    skill_list_inst1 = multiple_replace(lang_skills, template1.skills_list)
+    # skills = re.sub("&&SKILL_LIST&&", skill_list_inst1, str(template1.projects))
 
     d = {
         "&&NAME&&": "Tux",
@@ -42,7 +65,9 @@ def write_resume():
         "&&UNIV_LOC&&": "San Luis Obispo, CA",
         "&&UNIV_DESC&&": "Bachelor of Science in Computer Science",
         "&&UNIV_DATES&&": "May 2000 - Feb 2001",
-        "&&EXPERIENCE&&": exp
+        "&&EXPERIENCE&&": exp,
+        "&&PROJECTS&&": projects,
+        "&&SKILL_LIST&&": skill_list_inst1
     }
 
     
