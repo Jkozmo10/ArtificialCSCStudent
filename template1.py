@@ -128,43 +128,7 @@ resume = r"""%-------------------------
   \resumeSubHeadingListEnd
 
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-    &&EXPERIENCE&&
-
-    \resumeSubheading
-      {Undergraduate Research Assistant}{June 2020 -- Present}
-      {Texas A\&M University}{College Station, TX}
-      \resumeItemListStart
-        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
-        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Information Technology Support Specialist}{Sep. 2018 -- Present}
-      {Southwestern University}{Georgetown, TX}
-      \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-        \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-        \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
-      \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
+&&EXPERIENCE&&
 
 
 %-----------PROJECTS-----------
@@ -207,11 +171,34 @@ resume = r"""%-------------------------
 \end{document}
 """
 
-experience = """    \\resumeSubheading
+
+
+experience = r"""%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+&&EXPERIENCE_INSTS&&
+
+  \resumeSubHeadingListEnd"""
+
+experience_instance = r"""\\resumeSubheading
       {&&EXP_TITLE&&}{&&EXP_DATES&&}
       {&&EXP_ORG&&}{&&EXP_LOC&&}
       \\resumeItemListStart
-        &&EXP_BPS&&
+&&EXP_BPS&&
       \\resumeItemListEnd"""
 
-bullet_point = """        \\resumeItem{&&BP_INFO&&}"""
+bullet_point = r"""        \\resumeItem{&&BP_INFO&&}
+"""
+
+projects = r"""%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+&&PROJECT_INSTS&&
+
+  \resumeSubHeadingListEnd"""
+
+project_instance = r"""\resumeProjectHeading
+          {\\textbf{Gitlytics} $|$ \\emph{&&SKILLS&&}}{&&PROJ_DATES&&}
+          \\resumeItemListStart
+&&PROJ_BPS&&
+          \\resumeItemListEnd"""

@@ -20,8 +20,17 @@ def write_resume():
         "&&EXP_LOC&&": "The Restaurant at the End of the Universe",
         "&&EXP_BPS&&": exp1_bps
     }
-    exp = multiple_replace(experience1, template1.experience)
-    # print(exp)
+    exp_inst1 = multiple_replace(experience1, template1.experience_instance)
+    experience2 = {
+        "&&EXP_TITLE&&": "Product Manager",
+        "&&EXP_DATES&&": "May 1934 - May 3051",
+        "&&EXP_ORG&&": "LaTeX Foundation",
+        "&&EXP_LOC&&": "Outer Space",
+        "&&EXP_BPS&&": exp1_bps
+    }
+    exp_inst2 = multiple_replace(experience2, template1.experience_instance)
+    exp = re.sub("&&EXPERIENCE_INSTS&&", exp_inst1 + '\n' + exp_inst2, str(template1.experience))
+
 
     d = {
         "&&NAME&&": "Tux",
