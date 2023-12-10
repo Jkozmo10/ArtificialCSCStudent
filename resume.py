@@ -74,7 +74,7 @@ def write_resume():
     with open(filename, 'w') as f:
         f.write(multiple_replace(d, template1.resume))
 
-# From stack overflow, don't ask me how it works
+# From stack overflow
 def multiple_replace(replacements: dict, text):
     # Create a regular expression from the dictionary keys
     regex = re.compile("(%s)" % "|".join(map(re.escape, replacements.keys())))
