@@ -59,5 +59,17 @@ def get_distribution(year):
     return r
 
 
+def get_num_skills(year):
+    n = round(random.random() * 7 * year)
+    n = min(n, 15)
+    n = max(n, 4)
+    return n
+
+def get_num_courses(year):
+    n = round(random.random() * 4 * year)
+    n = min(n, 10)
+    n = max(n, 3)
+    return n
+
 if __name__ == "__main__":
     main()
