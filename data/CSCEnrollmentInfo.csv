@@ -1,0 +1,76 @@
+Course,Fall2023,Summer2023,Spring2023,Winter2023,Fall2022,Summer2022,Winter2022,Fall2021,Summer2021,Spring2021,Winter2021,Fall2020,Summer2020,Spring2020,Winter2020,Fall2019,Summer2019,Spring2019,Winter2019,Fall2018,Summer2018,Spring2018,Winter2018,Description,Year,2023Enroll
+CSC 101,142,20,242,474,145,12,395,150,32,250,376,136,28,165,417,143,0,296,282,77,19,295,279,Fundamentals of Computer Science,1,1398
+CSC 121,0,0,0,0,0,0,11,0,0,29,0,0,0,0,0,0,0,0,0,0,0,0,0,Computing for All I,1,11
+CSC 123,151,3,0,31,173,0,36,233,0,0,25,182,0,0,36,176,0,0,30,165,0,0,0,Introduction to Computing,1,391
+CSC 202,196,15,263,194,199,30,172,178,24,244,132,175,55,287,108,158,19,224,106,210,8,285,35,Data Structures,2,1024
+CSC 203,242,0,174,218,255,0,177,217,0,140,161,240,37,73,143,224,19,69,180,264,0,83,112,Project-Based Object-Oriented Programming and Design,2,1066
+CSC 225,114,0,103,167,103,0,149,98,0,93,100,118,36,61,104,119,0,50,163,69,0,41,158,Introduction to Computer Organization,2,636
+CSC 232,0,0,0,33,32,0,0,12,0,40,39,55,21,28,60,61,0,26,38,86,0,29,30,Computer Programming for Scientists and Engineers,2,65
+CSC 234,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,17,0,0,0,28,0,C and Unix,2,0
+CSC 248,135,0,209,215,107,0,123,98,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Discrete Structures,2,789
+CSC 300,0,4,0,0,0,0,0,17,0,0,0,71,0,75,83,87,0,100,121,88,0,84,106,Professional Responsibilities,3,0
+CSC 302,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,30,20,,3,0
+CSC 305,32,0,36,0,49,0,33,31,0,40,31,41,0,0,33,68,0,28,32,70,0,31,0,Individual Software Design and Development,3,150
+CSC 307,162,23,68,32,92,0,32,84,0,82,56,60,13,70,98,73,0,64,35,106,0,70,35,Introduction to Software Engineering,3,386
+CSC 308,0,0,0,35,32,0,60,0,0,0,46,30,0,23,35,36,0,0,65,37,0,0,65,Software Engineering I,3,127
+CSC 309,0,0,32,29,0,0,0,0,0,46,30,0,0,35,37,0,0,64,38,0,0,65,32,Software Engineering II,3,61
+CSC 309,0,0,32,29,0,0,0,0,0,46,30,0,0,23,37,0,0,64,38,0,0,65,32,Software Engineering II,3,61
+CSC 309,0,0,32,29,0,0,0,0,0,46,30,0,0,35,37,0,0,64,38,0,0,65,32,Software Engineering II,3,61
+CSC 309,0,0,32,29,0,0,0,0,0,46,30,0,0,23,37,0,0,64,38,0,0,65,32,Software Engineering II,3,61
+CSC 310,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,,3,0
+CSC 313,0,0,33,0,0,0,0,0,0,33,0,0,0,32,0,0,0,0,0,0,0,0,0,Teaching Computing,3,33
+CSC 320,26,6,25,0,30,20,26,27,21,0,0,25,17,30,28,0,8,0,0,0,0,0,0,Practical Computer Security for Everyone,3,107
+CSC 321,61,0,62,58,129,0,58,58,0,0,93,38,27,62,0,77,0,29,57,55,0,0,92,Introduction to Computer Security,3,368
+CSC 323,0,0,0,58,0,0,0,0,0,0,67,0,0,0,0,0,0,52,0,0,0,0,0,Cryptography Engineering,3,58
+CSC 325,61,0,0,0,57,0,0,0,0,32,0,0,0,0,28,0,0,0,30,0,0,0,0,Introduction to Privacy: Policy and Technology,3,118
+CSC 348,0,0,0,0,0,0,0,0,0,101,150,107,36,92,151,110,0,199,114,112,0,142,228,,3,0
+CSC 349,232,28,173,131,138,13,93,126,31,157,97,104,30,187,71,198,21,150,106,161,0,118,80,Design and  Analysis of Algorithms,3,767
+CSC 357,199,0,280,62,184,0,186,137,0,187,148,101,30,159,168,139,0,210,164,111,0,195,210,Systems Programming,3,911
+CSC 365,166,18,111,104,146,26,89,90,0,99,99,55,29,66,96,147,0,102,97,64,0,68,37,Introduction to Database Systems,3,616
+CSC 366,0,0,0,0,0,0,26,0,0,0,0,28,0,35,33,0,0,16,0,0,0,27,15,"Database Modeling, Design and Implementation",3,26
+CSC 369,24,17,0,34,52,15,51,27,0,31,86,0,0,28,65,0,0,0,25,30,0,0,68,Introduction to Distributed Computing,3,161
+CSC 371,0,0,0,0,0,0,71,35,0,0,67,0,0,0,66,0,0,0,54,0,0,34,34,Game Design,3,71
+CSC 377,0,0,0,0,0,0,0,0,0,0,25,0,0,30,0,0,0,0,0,0,0,0,0,Introduction to Mixed Reality,3,0
+CSC 378,0,0,32,32,0,0,46,0,0,0,31,0,0,0,25,0,0,0,27,0,0,0,26,Interactive Entertainment Engineering,3,110
+CSC 402,51,0,0,0,51,0,0,50,0,0,27,50,0,0,0,61,0,0,0,62,0,0,0,Software Requirements Engineering,4,102
+CSC 405,0,0,0,49,0,0,48,0,0,27,51,0,0,0,61,0,0,0,61,0,0,0,53,Software Construction,4,97
+CSC 406,0,0,50,0,0,0,0,0,0,78,0,0,0,61,0,0,0,60,0,0,0,53,0,Senior Project - Software Deployment,4,50
+CSC 409,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,Current Topics in Software Engineering,4,0
+CSC 410,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Software Evaluation,4,29
+CSC 421,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Binary Exploitation: Tools and Techniques,4,29
+CSC 422,0,0,15,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,9,0,0,0,23,Network Security,4,15
+CSC 424,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,Software Security,4,30
+CSC 425,0,0,0,13,0,0,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Wireless Security,4,36
+CSC 429,0,0,27,0,0,0,0,0,0,0,22,28,0,0,25,0,0,0,0,0,0,0,0,Current Topics in Computer Security,4,27
+CSC 430,131,0,102,69,63,0,155,36,0,72,96,119,32,103,152,113,0,40,167,176,0,43,124,Programming Languages,4,520
+CSC 431,0,0,34,0,0,0,23,0,0,0,0,23,0,28,0,21,0,133,37,15,0,77,0,Compiler Construction,4,57
+CSC 436,0,0,34,0,0,0,0,0,0,0,0,0,0,0,28,0,0,32,27,68,0,62,51,Mobile Application Development,4,34
+CSC 437,0,0,0,0,0,0,0,0,0,0,25,0,0,61,0,18,0,0,39,0,0,0,62,Dynamic Web Development,4,0
+CSC 445,91,28,66,90,65,30,68,55,0,57,116,57,20,57,119,73,0,34,132,81,0,60,38,Theory of Computation I,4,380
+CSC 448,23,0,0,0,27,0,0,31,0,0,0,26,0,28,0,0,0,0,0,0,0,29,0,Bioinformatics Algorithms,4,50
+CSC 453,169,0,101,120,78,0,98,70,0,88,61,144,27,110,174,72,0,182,92,71,0,224,33,Introduction to Operating Systems,4,566
+CSC 466,55,15,0,43,67,13,27,57,0,92,0,0,0,25,63,26,0,61,0,23,0,36,0,Knowledge Discovery from Data,4,192
+CSC 468,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,0,0,19,0,0,0,0,0,Database Management Systems Implementation,4,0
+CSC 471,0,0,0,31,22,0,30,30,0,22,29,35,0,0,33,63,0,32,24,32,0,30,80,Introduction to Computer Graphics,4,83
+CSC 473,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,0,0,0,0,0,0,25,0,Advanced Rendering Techniques,4,0
+CSC 474,0,0,20,0,0,0,0,0,0,33,0,0,0,0,0,0,0,16,0,0,0,31,0,Computer Animation,4,20
+CSC 476,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,25,0,0,0,0,26,Real-Time 3D Computer Graphics Software,4,0
+CSC 478,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,Current Topics in Computer Graphics,4,0
+CSC 480,115,0,32,0,69,0,69,29,53,43,34,108,30,59,0,109,0,64,33,113,0,0,62,Artificial Intelligence,4,285
+CSC 481,0,0,0,0,0,0,13,0,0,0,0,0,0,9,0,0,0,13,0,0,0,0,24,Knowledge Based Systems,4,13
+CSC 482,38,0,0,22,0,0,0,39,0,0,22,24,0,0,23,25,0,0,0,0,0,0,0,Speech and Language Processing,4,60
+CSC 484,52,0,91,96,36,0,0,35,0,65,60,62,24,62,60,75,0,71,59,66,0,38,66,User-Centered Interface Design and Development,4,275
+CSC 486,0,0,0,0,0,0,0,27,0,30,43,33,14,30,32,0,0,36,29,0,0,41,23,Human-Computer Interaction Theory and Design,4,0
+CSC 487,0,0,36,38,0,0,43,0,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,Deep Learning,4,117
+CSC 490,0,0,0,0,0,0,27,0,0,0,16,0,0,0,0,0,0,25,0,0,0,32,0,Selected Advanced Topics,4,27
+CSC 521,0,0,0,0,0,0,0,0,0,0,19,0,0,18,0,0,0,14,0,0,0,0,0,Computer Security,5,0
+CSC 522,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Advanced Network Security,5,14
+CSC 524,35,0,0,0,0,0,0,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,System Security,5,35
+CSC 549,30,0,14,0,0,0,18,0,0,0,0,20,0,31,0,0,0,0,0,0,0,0,0,Advanced Algorithm Design and Analysis,5,62
+CSC 564,0,0,0,0,17,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,18,0,Computer Networks: Research Topics,5,17
+CSC 566,0,0,0,25,0,0,22,0,0,30,0,0,0,0,0,0,0,0,30,0,0,0,0,Topics in Advanced Data Mining,5,47
+CSC 569,0,0,0,0,0,0,38,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,38,Distributed Computing,5,38
+CSC 572,0,0,0,0,0,0,0,14,0,0,0,22,0,0,0,23,0,0,0,12,0,0,0,Computer Graphics,5,0
+CSC 580,0,0,0,0,30,0,0,40,0,0,0,0,0,0,39,0,0,26,0,0,0,0,0,Artificial Intelligence,5,30
+CSC 581,0,0,0,24,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,29,0,Computer Support for Knowledge Management,5,24
+CSC 582,0,0,0,0,0,0,0,0,0,26,0,0,0,18,0,0,0,0,0,0,0,0,0,Computational Linguistics,5,0
