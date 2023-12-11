@@ -1,0 +1,39 @@
+Input:
+```
+{
+    "studentYear": "5",
+    "projectName": "UML2Code - React, Vercel, Java"
+}
+```
+Output:
+Developed a full-stack web application designed to educate students in intro CS courses on UML diagramming and fundamental object-oriented design principles. Implemented an interactive diagramming interface with React, RESTful backend server with Express, and CI/CD pipeline with GitHub Actions and Vercel. Currently implementing a Java code generation algorithm from the diagrams constructed within the application.
+
+Input:
+```
+{
+    "studentYear": "4",
+    "projectName": "LinkedUp - CSS, React, React-Bootstrap"
+}
+```
+Output:
+Collaborated on the development of an event-planning website over a 5-week period with 3 other team members, utilizing an agile methodology with 3 sprints. Responsible for the design and front-end development using React Bootstrap and CSS, resulting in a visually appealing and user-friendly website.
+
+Input:
+```
+{
+    "studentYear": "2",
+    "projectName": "Custom Fraternity Mobile App - React Native"
+}
+```
+Output:
+Collaborated with fraternity brothers to create a custom mobile application, built on a React Native w/ Typescript framework. https://github.com/xxxxxxxxxx.
+
+Input:
+```
+{
+    "studentYear": "5",
+    "projectName": "Cosmic Orchards - C#, Unity"
+}
+```
+Output:
+Developed an interactive experience through Unity programming and integration of both VR and desktop versions to illustrate individual impact towards climate change. Proficiently managed the entire development process from ideation and programming to debugging and playtesting.

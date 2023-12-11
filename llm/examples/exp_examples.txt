@@ -1,0 +1,54 @@
+Input:
+```
+{
+    "company": "Collective[i]",
+    "position": "Software Engineer Intern",
+    "studentYear": "5"
+}
+```
+Output:
+Used Node API endpoints created by our back-end team, and Angular, to develop a web application according to requirements defined through tickets in Jira. Worked on a scrum team of professional front-end engineers.
+
+Input:
+```
+{
+    "company": "MongoDB",
+    "position": "Software Engineering Intern",
+    "studentYear": "5"
+}
+```
+Output:
+Added type annotations to Python driver code base. Increased the performance of the Python driver by up to 134%. Broke down projects into 40+ tickets for development. Defined the specification for a project including designing the software architecture that accounts for future improvements after project handoff. Implemented a GO program that read hundreds of queries every hour from S3 and stored the lineage in the Neo4j database. Utilized the open source Trino SQL parser to extract data lineage from queries. Built a backend flask API that queries a Neo4j database.
+
+Input:
+```
+{
+    "company": "SoFi",
+    "position": "Product Manager Intern",
+    "studentYear": "4"
+}
+```
+Output:
+Led initiatives to enhance user experience and retention for 620,000+ members on the SoFi Invest platform, with a focus on supporting novice and under confident investors. Conceptualized ideation, vision, discovery, and roadmap formulation for a stock market simulator through comprehensive UX research and collaboration with cross-functional team members. Supported fellow product managers in their projects by conducting design reviews and retrospectives, contributing to Product Requirements Documents, and generating Jira tickets to facilitate tasks for engineers.
+
+Input:
+```
+{
+    "company": "WindRiver",
+    "position": "Compiler Software Intern",
+    "studentYear": "4"
+}
+```
+Output:
+Worked on WindRiver’s state of the art diab compiler, at multiple stages from parser to the IR to the optimizer. Integrated new compiler pipeline with WindRiver’s compiler to work with C++11 standards using C & C++. Succinctly presented finished EDG compiler integration to team, experts, and laymen. Finished 36+ story points in AGILE setting - biweekly sprints, daily scrums, creating, developing, & reviewing.
+
+Input:
+```
+{
+    "company": "Artesian Future Technology",
+    "position": "Intern",
+    "studentYear": "2"
+}
+```
+Output:
+Aided with implementation of new company website. Built computers for sale and developed internal computer wiring system for in-house lighting products. Partnered company with brand ambassadors.

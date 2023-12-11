@@ -1,0 +1,35 @@
+Input:
+```
+{
+    "studentYear": "5"
+}
+```
+Output:
+UML2Code - React
+
+Input:
+```
+{
+    "studentYear": "4"
+}
+```
+Output:
+LinkedUp - CSS, React, React-Bootstrap
+
+Input:
+```
+{
+    "studentYear": "2"
+}
+```
+Output:
+Custom Fraternity Mobile App - React Native
+
+Input:
+```
+{
+    "studentYear": "5"
+}
+```
+Output:
+Cosmic Orchards - C#, Unity
