@@ -23,6 +23,10 @@ def get_distribution(year):
             class_factor = 1
         case 4:
             class_factor = 1.5
+        case 5:
+            class_factor = 1.8
+        case _:
+            raise Exception(f"Did not find year: {year}")
 
     num_experiences = round(random.random() * 3 * class_factor)
     num_experiences = min(num_experiences, 3)

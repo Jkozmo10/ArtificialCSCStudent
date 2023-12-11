@@ -119,40 +119,28 @@ resume = r"""%-------------------------
 \end{center}
 
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {&&UNIVERSITY&&}{&&UNIV_LOC&&}
-      {&&UNIV_DESC&&}{&&UNIV_DATES&&}
-  \resumeSubHeadingListEnd
-
-
-&&EXPERIENCE&&
-
-&&PROJECTS&&
-
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib} \\
-     &&SKILL_LIST&&
-    }}
- \end{itemize}
+&&CONTENT&&
 
 
 %-------------------------------------------
 \end{document}
 """
 
+content = r"""&&EDUCATION&&
 
+&&EXPERIENCE&&
+
+&&PROJECTS&&
+
+&&SKILLS&&"""
+
+education = r"""%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {&&UNIVERSITY&&}{&&UNIV_LOC&&}
+      {&&UNIV_DESC&&}{&&UNIV_DATES&&}
+  \resumeSubHeadingListEnd"""
 
 experience = r"""%-----------EXPERIENCE-----------
 \section{Experience}
@@ -184,4 +172,12 @@ project_instance = r"""\\resumeProjectHeading
 &&PROJ_BPS&&
           \\resumeItemListEnd"""
 
-skills_list = r"""\textbf{&&LIST_NAME&&}{: &&SKILLS&&} \\"""
+skills = r"""%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    &&SKILL_LIST&&
+    }}
+ \end{itemize}"""
+
+# skills_list = r"""\textbf{&&LIST_NAME&&}{: &&SKILLS&&} \\"""
