@@ -20,7 +20,7 @@ Then `cd` into the repository:
 cd CSC482-Project
 ```
 
-### Create a virtual environment
+### Create a virtual environment (optional)
 
 This step is optional, but recommended. To create a virtual environment, run the following command:
 
