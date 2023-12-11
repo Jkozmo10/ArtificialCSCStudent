@@ -4,6 +4,7 @@ import utils
 import resume
 import calendar
 import sys
+from llm.alpaca import generate_experience, generate_project
 
 df_jobs = pd.read_csv("data/alumniJobs.csv")
 df_locations = pd.read_csv("data/alumniLocation.csv")
@@ -44,8 +45,9 @@ def main(year=None):
         exp['exp_org'] = companies_positions[idx][0]
         exp['exp_loc'] = companies_positions[idx][2]
         exp['exp_dates'] = get_exp_dates(idx)
-        for b in range(num_bp):
-            bps.append("This is a bullet point") # TODO LLM
+        bps = generate_experience(company=exp['exp_org'], position=exp['exp_title'], student_year=year)
+        # for b in range(num_bp):
+        #     bps.append("This is a bullet point") # TODO LLM
         exp['exp_bps'] = bps
         d['experiences'].append(exp)
 
@@ -54,11 +56,14 @@ def main(year=None):
     for idx, num_bp in enumerate(nums_dict['projects']):
         proj = {}
         bps = []
-        proj['proj_title'] = 'Title' # TODO LLM
-        proj['proj_skills'] = ', '.join(random.sample(d['skills'], random.randrange(1, 4)))
+        techs = random.sample(d['skills'], random.randrange(1, 4))
+        pname, bps = generate_project(student_year=year, course_taken=random.choice(d['courses'].split(', ')), technologies=techs)
+        proj['proj_title'] = pname # TODO LLM
+        proj['proj_skills'] = ', '.join(techs)
         proj['proj_date'] = dates[idx]
-        for b in range(num_bp):
-            bps.append("This is a bullet point") # TODO LLM
+        
+        # for b in range(num_bp):
+        #     bps.append("This is a bullet point") # TODO LLM
         proj['proj_bps'] = bps
         d['projects'].append(proj)
 
