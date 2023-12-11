@@ -1,11 +1,11 @@
 .DS_Store
-*/.DS_Store
+**/.DS_Store
 .venv/
-*/.venv/
+**/.venv/
 __pycache__/
-*/__pycache__/
+**/__pycache__/
 prompt.txt
-*/prompt.txt
+**/prompt.txt
 llm_log.txt
-*/llm_log.txt
-llm/resources/
+**/llm_log.txt
+ggml-*
