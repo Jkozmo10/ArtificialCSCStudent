@@ -140,7 +140,8 @@ education = r"""%-----------EDUCATION-----------
     \resumeSubheading
       {&&UNIVERSITY&&}{&&UNIV_LOC&&}
       {&&UNIV_DESC&&}{&&UNIV_DATES&&}
-  \resumeSubHeadingListEnd"""
+  \resumeSubHeadingListEnd
+  \textbf{Coursework $|$ } &&COURSES&&"""
 
 experience = r"""%-----------EXPERIENCE-----------
 \section{Experience}

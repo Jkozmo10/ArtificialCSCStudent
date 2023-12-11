@@ -33,6 +33,7 @@ def write_resume(d):
         "&&UNIV_LOC&&": d['uni_loc'],
         "&&UNIV_DESC&&": d['uni_desc'],
         "&&UNIV_DATES&&": d['uni_dates'],
+        "&&COURSES&&": d['courses']
     }
     content_dict['&&EDUCATION&&'] = multiple_replace(edu_dict, template1.education)
     
@@ -76,7 +77,6 @@ def write_resume(d):
                                      str(template1.skills))
     
 
-    # print(content_dict.keys())
 
     if len(d['experiences']) == 0:
         content_dict['&&EXPERIENCE&&'] = ''
@@ -89,6 +89,7 @@ def write_resume(d):
     
     with open(filename, 'w') as f:
         f.write(multiple_replace(tex_d, template1.resume))
+
 
 # From stack overflow
 def multiple_replace(replacements: dict, text):

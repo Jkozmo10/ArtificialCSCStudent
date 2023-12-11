@@ -15,11 +15,10 @@ def main(year=None):
     if year == None:
         year = get_year()
 
-    first_name = "Tux"
-    last_name = "Linux"
+    first_name, last_name = get_name()
     d = {}
     d['name'] = f'{first_name} {last_name}' # Generate name function?
-    d['phone'] = "123-456-7890"
+    d['phone'] = get_phone_number()
     d['email'] = f'{get_calpoly_username(first_name, last_name)}@calpoly.edu'
     d['linkedin'] = f'www.linkedin.com/in/{first_name.lower()}-{last_name.lower()}'
     d['github'] = f'github.com/{get_calpoly_username(first_name, last_name)}'
@@ -65,6 +64,17 @@ def main(year=None):
     # print(d)
     resume.write_resume(d)
 
+def get_phone_number():
+    return f'({random.randrange(1000):03d}) {random.randrange(1000):03d}-{random.randrange(10000):04d}'
+
+def get_name():
+    mascots = ["Camelia", "Dash", "Duke", "elePHPant", "Ferris", "Gopher", "Kodee", "Camel", "Sakila", \
+               "Sionik", "Tux", "Ziggy", "Blinky", "Geeko", "GNU", "Larry", "Octocat", "Puffy"]
+    techs = ["Python", "Haskell", "Rust", "Java", "Cee", "Javascript", "Mysql", "Linux", "Zig", "Nim", \
+             "Basic", "Ada", "Fortran", "Cobol", "Perl", "Raku", "Dart", "Kotlin", "Elixir", "Go", \
+             "Ruby", "Pascal", "Racket", "Prolog", "Scheme", "Lisp", "Assembly"]
+    
+    return (random.choice(mascots), random.choice(techs))
 
 def get_project_dates(numProjects):
     months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
