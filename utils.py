@@ -46,9 +46,6 @@ def get_distribution(year):
         if d[section] >= max_lines:
             sections.remove(section)
 
-    # print(d)
-    # print(f"Sum of d is {sum(d.values())}")
-
     r = {
         "experiences": [],
         "projects": [],
@@ -59,7 +56,6 @@ def get_distribution(year):
         else:
             r['projects'].append(v)
 
-    # print(r)
     return r
 
 

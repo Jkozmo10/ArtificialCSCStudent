@@ -3,6 +3,7 @@ import random
 import utils
 import resume
 import calendar
+import sys
 
 df_jobs = pd.read_csv("data/alumniJobs.csv")
 df_locations = pd.read_csv("data/alumniLocation.csv")
@@ -165,4 +166,8 @@ Run latex on generated resume, serve back to user
 """
 
 if __name__ == "__main__":
-    main()
+    args = sys.argv
+    if len(args) > 1:
+        main(int(args[1]))
+    else:
+        main()
