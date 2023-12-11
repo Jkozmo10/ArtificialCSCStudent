@@ -107,8 +107,10 @@ def get_uni_dates(year):
         return 'Sep. 2022 - June 2026'
     elif year == 3:
         return 'Sep. 2021 - June 2025'
-    else:
+    elif year == 4:
         return 'Sep. 2020 - June 2024'
+    else:
+        return 'Sep. 2019 - June 2024'
 
 def get_exp_dates(idx):
     return f'June {2023 - idx} - Sep. {2023 - idx}'
