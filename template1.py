@@ -126,13 +126,13 @@ resume = r"""%-------------------------
 \end{document}
 """
 
-content = r"""&&EDUCATION&&
+# content1 = r"""&&EDUCATION&&
 
-&&EXPERIENCE&&
+# &&EXPERIENCE&&
 
-&&PROJECTS&&
+# &&PROJECTS&&
 
-&&SKILLS&&"""
+# &&SKILLS&&"""
 
 education = r"""%-----------EDUCATION-----------
 \section{Education}

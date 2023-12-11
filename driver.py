@@ -40,7 +40,7 @@ def main(year=None):
     for idx, num_bp in enumerate(nums_dict['experiences']):
         exp = {}
         bps = []
-        exp['exp_title'] = companies_positions[idx][1] # TODO Transform this into a position (e.g. Engineering => Software Engineer Intern)
+        exp['exp_title'] = companies_positions[idx][1]
         exp['exp_org'] = companies_positions[idx][0]
         exp['exp_loc'] = companies_positions[idx][2]
         exp['exp_dates'] = get_exp_dates(idx)
@@ -49,19 +49,20 @@ def main(year=None):
         exp['exp_bps'] = bps
         d['experiences'].append(exp)
 
+    dates = get_project_dates(len(nums_dict['projects']))[::-1]
+
     for idx, num_bp in enumerate(nums_dict['projects']):
         proj = {}
         bps = []
-        proj['proj_title'] = 'Title' # TODO
-        proj['proj_skills'] = 'No skills' # TODO 
-        dates = get_project_dates(len(nums_dict['projects']))[::-1]
+        proj['proj_title'] = 'Title' # TODO LLM
+        proj['proj_skills'] = ', '.join(random.sample(d['skills'], random.randrange(1, 4)))
         proj['proj_date'] = dates[idx]
         for b in range(num_bp):
             bps.append("This is a bullet point") # TODO LLM
         proj['proj_bps'] = bps
         d['projects'].append(proj)
 
-    print(d)
+    # print(d)
     resume.write_resume(d)
 
 
@@ -123,7 +124,7 @@ def get_skills(numSkills):
         if curGen not in output:
             output.append(curGen)
     
-    return ', '.join(output) # returns string
+    return output # returns list
 
 def get_relevant_coursework(year, numCourses):
     df_filtered = df_courses[(df_courses['Year'] == year) | (df_courses['Year'] == year - 1)]
@@ -144,7 +145,7 @@ def get_year():
 """
 User clicks button, selects year
 Year feeds into util function, determines how many projects + experiences - DONE
-Determine dates of each project + experience - TODO
+Determine dates of each project + experience - Done
 Query data to determine companies worked for (experiences) + job title, user skills, coursework - DONE
 Feed into LLM:
     Company + title => Experience bullet points
