@@ -50,7 +50,7 @@ python3 -c "from llm import alpaca; alpaca.download()"
 
 ## How to Run the Resume Generator (GUI/CLI)
 
-Our project has both graphical and a command line interfaces. It can be run from either, but the GUI may have some bugs.
+Our project has both graphical and command-line interfaces.
 
 ### Running the GUI
 
