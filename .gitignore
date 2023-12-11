@@ -1,10 +1,6 @@
-.DS_Store
-*/.DS_Store
-.venv/
-*/.venv/
-__pycache__/
-*/__pycache__/
-prompt.txt
-*/prompt.txt
-ggml-alpaca-7b-q4.bin
-*/ggml-alpaca-7b-q4.bin
+**/.DS_Store
+**/.venv/
+**/__pycache__/
+**/prompt.txt
+**/llm_log.txt
+**/ggml-alpaca-7b-q4.bin
