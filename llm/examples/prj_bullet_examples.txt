@@ -2,7 +2,9 @@ Input:
 ```
 {
     "studentYear": "5",
-    "projectName": "UML2Code - React, Vercel, Java"
+    "courseTaken": "Software Deployment",
+    "projectName": "UML2Code",
+    "technologies": ["React", "Vercel", "Java"]
 }
 ```
 Output:
@@ -12,7 +14,9 @@ Input:
 ```
 {
     "studentYear": "4",
-    "projectName": "LinkedUp - CSS, React, React-Bootstrap"
+    "courseTaken": "Software Engineering II",
+    "projectName": "LinkedUp",
+    "technologies": ["CSS", "React", "React-Bootstrap"]
 }
 ```
 Output:
@@ -22,7 +26,9 @@ Input:
 ```
 {
     "studentYear": "2",
-    "projectName": "Custom Fraternity Mobile App - React Native"
+    "courseTaken": "Intro to Software Engineering",
+    "projectName": "Custom Fraternity Mobile App",
+    "technologies": ["React Native", "Typescript"]
 }
 ```
 Output:
@@ -32,7 +38,9 @@ Input:
 ```
 {
     "studentYear": "5",
-    "projectName": "Cosmic Orchards - C#, Unity"
+    "courseTaken": "Game Development",
+    "projectName": "Cosmic Orchards",
+    "technologies": ["C#", "Unity"]
 }
 ```
 Output:

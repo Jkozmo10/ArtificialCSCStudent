@@ -62,8 +62,23 @@ class Alpaca:
         ).read().strip()
 
 
-def generate_exp_bps(company: str, position: str, student_year: str) -> list:
-    """ Generate experience bullet points for a resume """
+def generate_experience(
+    company: str,
+    position: str,
+    student_year: str,
+    retries: int = 3,
+    debug: bool = False
+) -> list:
+    """
+    Generate experience bullet points for a resume
+    - `company`: Name of the company
+    - `position`: Name of the position
+    - `student_year`: Student's year at Cal Poly (e.g. "1", "2", etc.)
+    - `retries`: Number of times to retry if the LLM fails to generate a
+        valid response
+
+    Returns a list of bullet points
+    """
     purpose = EXPERIENCES_PURPOSE
     llm = Alpaca(purpose, "exp_examples.txt")
     input_str = f'```\n' \
@@ -73,12 +88,46 @@ def generate_exp_bps(company: str, position: str, student_year: str) -> list:
                 f'    "studentYear": "{student_year}"\n' \
                 f'}}\n' \
                 f'```'
+    result = []
+
+    def validator(lst: list):
+        correct_len = len(lst) >= 2
+        correct_pos = len([
+            nltk.pos_tag(nltk.word_tokenize(bp))[0][1].upper()
+            in ["VBD", "VBN"] for bp in lst[:-1]
+        ])
+        return correct_len and correct_pos >= len(lst) / 2
+
     prompt = llm.generate_prompt(input_str)
-    return nltk.sent_tokenize(llm.prompt(prompt))
+    while not validator(result) and retries > 0:
+        result = nltk.sent_tokenize(llm.prompt(prompt))
+        if debug:
+            print("\nFailure, retrying...", result, sep="\n")
+        result = [
+            bp for bp in result
+            if len(bp) > 0 and bp.strip()[-1] in [".", "?", "!"]
+        ]
+        retries -= 1
+    return result
 
 
-def generate_prj_bps(student_year: str) -> list:
-    """ Generate project bullet points for a resume """
+def generate_project(
+    student_year: str,
+    course_taken: str,
+    technologies: list,
+    retries: int = 3,
+    debug: bool = False
+) -> tuple:
+    """
+    Generate project name and bullet points for a resume
+    - `student_year`: Student's year at Cal Poly (e.g. "1", "2", etc.)
+    - `course_taken`: Course taken to enspire the project
+    - `technologies`: List of technologies used in the project
+    - `retries`: Number of times to retry if the LLM fails to generate a
+        valid response
+
+    Returns a tuple containing containing project name followed by list of bullet points
+    """
     name_purpose = PROJECTS_NAME_PURPOSE
     bullet_purpose = PROJECTS_BULLET_PURPOSE
     name_llm = Alpaca(name_purpose, "prj_name_examples.txt")
@@ -86,18 +135,44 @@ def generate_prj_bps(student_year: str) -> list:
     input_str = f'```\n' \
                 f'{{\n' \
                 f'    "studentYear": "{student_year}"\n' \
+                f'    "courseTaken": "{course_taken}"\n' \
+                f'    "technologies": {"[" + ", ".join(technologies) + "]"}\n' \
                 f'}}\n' \
                 f'```'
+    name = ""
     prompt = name_llm.generate_prompt(input_str)
-    name = name_llm.prompt(prompt)
+    while len(name.strip()) == 0:
+        name = name_llm.prompt(prompt)
+    ts = [('"' + t + '"') for t in technologies]
     input_str = f'```\n' \
                 f'{{\n' \
                 f'    "studentYear": "{student_year}",\n' \
+                f'    "courseTaken": "{course_taken}",\n' \
                 f'    "projectName": "{name}"\n' \
+                f'    "technologies": {"[" + ", ".join(ts) + "]"}\n' \
                 f'}}\n' \
                 f'```'
+    result = []
+
+    def validator(lst: list):
+        correct_len = len(lst) >= 1
+        correct_pos = len([
+            nltk.pos_tag(nltk.word_tokenize(bp))[0][1].upper()
+            in ["VBD", "VBN"] for bp in lst[:-1]
+        ])
+        return correct_len and correct_pos >= len(lst) / 2
+
     prompt = bullet_llm.generate_prompt(input_str)
-    return [name] + nltk.sent_tokenize(bullet_llm.prompt(prompt))
+    while not validator(result) and retries > 0:
+        result = nltk.sent_tokenize(bullet_llm.prompt(prompt))
+        if debug:
+            print("\nFailure, retrying...", result, sep="\n")
+        result = [
+            bp for bp in result
+            if len(bp) > 0 and bp.strip()[-1] in [".", "?", "!"]
+        ]
+        retries -= 1
+    return name, result
 
 
 def test():
@@ -121,12 +196,16 @@ def test():
                 year = input("Year:     ")
                 print("[Generating bullet points...]", flush=True, end="")
                 bps = [
-                    "\n- " + bp for bp in generate_exp_bps(company, position, year)]
+                    "\n- " + bp for bp in generate_experience(company, position, year)]
                 print("\n" + "".join(bps), end="\n\n")
             else:
-                year = input("Year: ")
+                year = input("Year:   ")
+                course = input("Course: ")
+                tech = input("Tech:   ").split(", ")
                 print("[Generating bullet points...]", flush=True, end="")
-                bps = ["\n- " + bp for bp in generate_prj_bps(year)]
+                prj = generate_project(year, course, tech)
+                print(f"\n{prj[0]} - {', '.join(tech)}", flush=True)
+                bps = ["\n- " + bp for bp in prj[1]]
                 print("\n" + "".join(bps), end="\n\n")
         except KeyboardInterrupt:
             print()
@@ -152,6 +231,7 @@ def download():
         sys.exit(1)
     print("\n[ Updating NLTK dependencies ]\n")
     nltk.download('punkt')
+    nltk.download('averaged_perceptron_tagger')
     print("\n[ Done ]")
 
 

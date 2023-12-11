@@ -1,25 +1,31 @@
 Input:
 ```
 {
-    "studentYear": "5"
+    "studentYear": "5",
+    "courseTaken": "Software Deployment",
+    "technologies": ["React", "Vercel", "Java"]
 }
 ```
 Output:
-UML2Code - React
+UML2Code
 
 Input:
 ```
 {
-    "studentYear": "4"
+    "studentYear": "4",
+    "courseTaken": "Software Engineering II",
+    "technologies": ["React", "React-Bootstrap", "CSS"]
 }
 ```
 Output:
-LinkedUp - CSS, React, React-Bootstrap
+LinkedUp
 
 Input:
 ```
 {
-    "studentYear": "2"
+    "studentYear": "2",
+    "courseTaken": "Intro to Software Engineering",
+    "technologies": ["React Native", "Typescript"]
 }
 ```
 Output:
@@ -28,8 +34,21 @@ Custom Fraternity Mobile App - React Native
 Input:
 ```
 {
-    "studentYear": "5"
+    "studentYear": "5",
+    "courseTaken": "Game Development",
+    "technologies": ["C#", "Unity"]
 }
 ```
 Output:
-Cosmic Orchards - C#, Unity
+Cosmic Orchards
+
+Input:
+```
+{
+    "studentYear": "1",
+    "courseTaken": "Data Structures",
+    "technologies": ["Python"]
+}
+```
+Output:
+Huffman Encoding & Decoding
