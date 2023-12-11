@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-
 """ Interface for the Alpaca LLM as a Python Module """
 
 import os
 import sys
+import time
+import nltk
 
-from time import time
-from nltk.tokenize import sent_tokenize
 from gdown import download as gdownload
 
 from llm import resources_dir, examples_dir
@@ -59,7 +58,7 @@ class Alpaca:
         return os.popen(
             f'{self.llm_path} -f ./prompt.txt '
             f'--temp {temp} --threads {n_threads} --seed '
-            f'{round(time())} --model {self.model_path} 2>llm_log.txt'
+            f'{round(time.time())} --model {self.model_path} 2>llm_log.txt'
         ).read().strip()
 
 
@@ -75,7 +74,7 @@ def generate_exp_bps(company: str, position: str, student_year: str) -> list:
                 f'}}\n' \
                 f'```'
     prompt = llm.generate_prompt(input_str)
-    return sent_tokenize(llm.prompt(prompt))
+    return nltk.sent_tokenize(llm.prompt(prompt))
 
 
 def generate_prj_bps(student_year: str) -> list:
@@ -98,7 +97,7 @@ def generate_prj_bps(student_year: str) -> list:
                 f'}}\n' \
                 f'```'
     prompt = bullet_llm.generate_prompt(input_str)
-    return [name] + sent_tokenize(bullet_llm.prompt(prompt))
+    return [name] + nltk.sent_tokenize(bullet_llm.prompt(prompt))
 
 
 def test():
@@ -135,18 +134,25 @@ def test():
 
 
 def download():
-    """ Downloads the LLM's weights """
+    """ Downloads the LLM's weights and NLTK dependencies """
     download_path = os.path.join(resources_dir, "ggml-alpaca-7b-q4.bin")
     g_drive_id = "1HMBBW5lwmhJCn9x0NGrDZdMo5U8j_eiy"
+    print("[ Downloading model weights ]\n")
     if os.path.exists(download_path):
-        print("Model already downloaded")
-        return
-    try:
-        gdownload(id=g_drive_id, output=download_path, resume=True)
-        print("Done")
-    except KeyboardInterrupt:
-        print(flush=True)
-        print("Download paused. Please run again to resume.")
+        print("Model already downloaded!")
+    else:
+        try:
+            gdownload(id=g_drive_id, output=download_path, resume=True)
+        except KeyboardInterrupt:
+            print(flush=True)
+            print("Download paused. Please run again to resume.")
+            sys.exit(1)
+    if not os.path.exists(download_path):
+        print("Model download failed!")
+        sys.exit(1)
+    print("\n[ Updating NLTK dependencies ]\n")
+    nltk.download('punkt')
+    print("\n[ Done ]")
 
 
 if __name__ == "__main__":

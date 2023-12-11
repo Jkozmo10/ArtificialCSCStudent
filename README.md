@@ -40,7 +40,9 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Download the LLM weights
+### Download LLM weights and NLTK data
+
+This will create a folder in your home directory (`~/nltk_data`). If you prefer, you can safely delete this folder after you are done with this project.
 
 ```sh
 python3 -c "from llm import alpaca; alpaca.download()"
