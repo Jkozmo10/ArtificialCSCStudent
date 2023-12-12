@@ -54,23 +54,17 @@ Our project has both graphical and command-line interfaces.
 
 ### Running the GUI
 
-The GUI requires two separate backend and frontend processes to be running simultaneously.
+The GUI requires the webapp to be running.
 
-The backend can be run with the following command:
-
-```sh
-python3 ...
-```
-
-To run the frontend, open a new terminal window, `cd` into the project directory, and run the following command:
+The webapp can be run with the following command:
 
 ```sh
-python3 ...
+python3 server.py
 ```
 
-With both both the backend and frontend running, navigate to http://localhost:5000 in your browser and you should see the GUI.
+With the webapp, navigate to http://localhost:8000 in your browser and you should see the GUI.
 
-Continue explaining the GUI...
+The architecture of the GUI will now be described. server.py contains all the endpoints. The page is generated with using a template html page. Templates are found in the /templates directory. Any data that needs to be displayed are found in the /static directory. Thus for resumes to be displayed, they must be moved to the /static directory. 
 
 ### Running the CLI
 
