@@ -1,4 +1,5 @@
 import random
+import re
 
 def main():
     get_distribution(3)
@@ -36,7 +37,7 @@ def get_distribution(year):
 
     min_lines = 2
     max_lines = 5
-    total_lines = 20
+    total_lines = 16
     sections = set([0, 1, 2, 3, 4])
     d = {s: min_lines for s in sections}
 
@@ -58,7 +59,6 @@ def get_distribution(year):
 
     return r
 
-
 def get_num_skills(year):
     n = round(random.random() * 7 * year)
     n = min(n, 15)
@@ -70,6 +70,11 @@ def get_num_courses(year):
     n = min(n, 10)
     n = max(n, 3)
     return n
+
+def preprocess_bp(bp):
+    bp = bp.replace('&', r'\&')
+    bp = bp.replace('%', r'\%')
+    return bp
 
 if __name__ == "__main__":
     main()

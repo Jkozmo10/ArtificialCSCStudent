@@ -46,9 +46,14 @@ def main(year=None):
         exp['exp_loc'] = companies_positions[idx][2]
         exp['exp_dates'] = get_exp_dates(idx)
         bps = generate_experience(company=exp['exp_org'], position=exp['exp_title'], student_year=year)
+        bps = [utils.preprocess_bp(bp) for bp in bps]
+        if len(bps) > num_bp:
+            exp['exp_bps'] = bps[:num_bp]
+        else:
+            exp['exp_bps'] = bps
         # for b in range(num_bp):
-        #     bps.append("This is a bullet point") # TODO LLM
-        exp['exp_bps'] = bps
+        #     bps.append(utils.preprocess_bp(r"Hello & Goodbye"))
+        # exp['exp_bps'] = bps
         d['experiences'].append(exp)
 
     dates = get_project_dates(len(nums_dict['projects']))[::-1]
@@ -58,13 +63,19 @@ def main(year=None):
         bps = []
         techs = random.sample(d['skills'], random.randrange(1, 4))
         pname, bps = generate_project(student_year=year, course_taken=random.choice(d['courses'].split(', ')), technologies=techs)
-        proj['proj_title'] = pname # TODO LLM
+        bps = [utils.preprocess_bp(bp) for bp in bps]
+        if len(bps) > num_bp:
+            proj['proj_bps'] = bps[:num_bp]
+        else:
+            proj['proj_bps'] = bps
+        proj['proj_title'] = utils.preprocess_bp(pname)
         proj['proj_skills'] = ', '.join(techs)
         proj['proj_date'] = dates[idx]
         
         # for b in range(num_bp):
-        #     bps.append("This is a bullet point") # TODO LLM
-        proj['proj_bps'] = bps
+        #     bps.append(utils.preprocess_bp(r"This is a % bullet point")) # TODO LLM
+        # proj['proj_bps'] = bps
+        
         d['projects'].append(proj)
 
     # print(d)
