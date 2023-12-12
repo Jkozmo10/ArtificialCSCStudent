@@ -74,6 +74,7 @@ def get_num_courses(year):
 def preprocess_bp(bp):
     bp = bp.replace('&', r'\&')
     bp = bp.replace('%', r'\%')
+    bp = bp.replace('#', r'\#')
     return bp
 
 if __name__ == "__main__":
