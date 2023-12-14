@@ -4,3 +4,7 @@
 **/prompt.txt
 **/llm_log.txt
 **/ggml-alpaca-7b-q4.bin
+**/resume.tex
+*.aux
+*.out
+*.log
