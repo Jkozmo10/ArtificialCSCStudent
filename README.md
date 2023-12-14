@@ -1,6 +1,6 @@
 # Resumator
 
-Resumator is a project created by [Nathan McCutchen](https://github.com/N8WM), [Jeremy Kozlowski](https://github.com/Jkozmo10), ... for **CSC 482** &mdash; *Speech and Language Processing* at Cal Poly.
+Resumator is a project created by [Nathan McCutchen](https://github.com/N8WM), [Jeremy Kozlowski](https://github.com/Jkozmo10), [Iris Ho](https://github.com/sleepyStick), and [Roy Gotlieb](https://github.com/RG-mania) for **CSC 482** &mdash; *Speech and Language Processing* at Cal Poly.
 
 ## Setup
 
