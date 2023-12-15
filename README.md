@@ -4,7 +4,7 @@ Resumator is a project created by [Nathan McCutchen](https://github.com/N8WM), [
 
 ## Setup
 
-This project requires Python 3.8+ and a system running MacOS or Linux. If you do not have Python 3.8 installed, you can download it [here](https://www.python.org/downloads/).
+This project requires Python 3.8+ and a system running MacOS or Linux. If you do not have Python 3.8 installed, you can download it [here](https://www.python.org/downloads/). You must also have LaTeX installed on your machine.
 
 ### Clone the repository
 
